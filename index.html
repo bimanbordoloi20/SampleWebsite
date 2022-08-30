@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graswald Store</title>
+    <title>Sample Website</title>
     <script>
         function addAsset(event) {
-            var base_url = window.location.origin;
-            url = `${base_url}/human.fbx`
+            var base_url = "https://bimanbordoloi20.github.io/SampleWebsite/";
+            url = `${base_url}human.fbx`
 
             fetch(`http://localhost:9999/add_asset?url=${url}`)
                 .then(res => res.json())
