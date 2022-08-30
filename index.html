@@ -10,13 +10,16 @@
         function addAsset(event) {
             var base_url = "https://bimanbordoloi20.github.io/SampleWebsite/";
             url = `${base_url}human.fbx`
-            
-            alert("Adding asset...");
+            button = document.getElementById("addAsset")
+
+            button.innerHTML = "Adding asset...";
 
             fetch(`http://localhost:9999/add_asset?url=${url}`)
                 .then(res => res.json())
                 .then(data => alert(data.message))
-                .catch(err => alert("Couldn't add asset: " + err.message));
+                .catch(err => alert("Couldn't add asset: " + err.message))
+                .finally(()=> button.innerHTML = "Add asset")
+                
         }
     </script>
 </head>
